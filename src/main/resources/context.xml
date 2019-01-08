@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<!-- The below tag is for Annotation - Comment Bean tags to use Annotation -->
+	 <context:component-scan base-package="com.capgemini.app"/> 
+
+		
+	<util:list id="boardMember">
+		<value>nikhil</value>
+		<value>pavan</value>
+		<value>harish</value>
+	</util:list>
+	
+	<util:map id="branchManager">
+		<entry key="india" value="nikhil"></entry>
+		<entry key="pakistan" value="pavan"></entry>
+		<entry key="australia" value="harish"></entry>
+	</util:map>
+	
+	<util:set id="cities">
+		<value> hyderabad</value>
+		<value> punjab</value>
+		<value> melbourne</value>
+	</util:set>
+<util:properties location="ipaddress.properties" id="ipaddresses"></util:properties>
+<bean class="java.time.LocalDate" factory-method="parse" id="date">
+<constructor-arg value="1996-10-12"></constructor-arg>
+</bean>
+</beans>
+
+
+
+
+
